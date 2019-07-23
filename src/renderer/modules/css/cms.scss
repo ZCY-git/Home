@@ -1,0 +1,787 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+/*------------------- 
+    App.vue
+--------------------*/ 
+html,body { 
+  font-family: 'Microsoft Yahei',Arial,tahoma,Helvetica,sans-serif;
+  height:100%; 
+  width: 100%;
+  font-size:16px;
+}
+
+#app{
+  height:100%; 
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Microsoft Yahei',Arial,tahoma,Helvetica,sans-serif;
+}
+
+/*------------------- 
+    home.vue
+--------------------*/ 
+#home{
+  width:100%;
+  height:inherit;
+  display: flex;
+  flex-flow:column;
+  .home-content{
+    flex: 1;
+  }
+}
+
+/*------------------- 
+    HomeIndex.vue
+    HomePlayback.vue
+    HomeSetting.vue
+--------------------*/ 
+
+#home-playback,#home-setting,#home-index{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  .left-coment{
+    width: 20%;
+    min-width: 20%;
+   }
+  .right-coment{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-flow:column;
+    .right-header{
+      width: 100%;
+     }
+    .right-center{
+      width: 100%;
+      flex: 1;
+    }
+    .right-footer{
+      width: 100%;
+    }
+   }
+}
+
+
+/*------------------------------
+    HomeindexHeader.vue
+    HomeplaybackHeader.vue
+--------------------------------*/ 
+#homeindex-header,#homeplayback-header{
+  width: 100%;
+  .header-box{
+    width: 100%;
+    height: 3rem;
+    padding: 0 0.5rem;
+    display:flex;
+    align-items: center;
+    justify-items:center;
+
+    .header-left{
+      font-size: 1rem;
+      font-weight:bold;
+    }
+    .header-center{
+      flex:1;
+    }
+    .header-right{
+      display:flex;
+      align-items:center;
+      justify-items:center;
+      font-size: 0.8rem;
+
+      .header-icon-box{
+        display: flex;
+        align-items:center;
+        justify-items: center;
+        border-radius: 10%;
+        margin: 0 0.3rem;
+        padding: 0.3rem 0.5rem;
+        
+        .header-icon{
+         margin-right:0.2rem;
+        }
+        .header-icon-title{
+          font-size: 0.8rem;
+        }
+      }
+    }
+  } 
+}
+
+/*----------------------------------------
+    Homeindexfooter.vue 主页底部导航栏
+------------------------------------------*/ 
+
+#homeindex-footer{
+  .footer{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-items: center;
+    align-items:center;
+    .center-navmenu{
+      flex: 1;
+    }
+    .footer-navmenu{
+      display: flex;  
+      justify-items: center;
+      align-items:center;
+  
+    }
+    .footer-icon-box{
+      margin: 0 0.3rem;
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      text-align: center;
+      align-content: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+  
+    .footer-icon-wifi{
+      padding:0.2rem 0.5rem;
+      border-radius: 10%;
+      font-size: 1.2rem;
+    }
+  
+    .wifi-speed{
+      font-size: 0.8rem;
+    }
+    .footer-icon{
+      width:100%;
+      font-size: 1.3rem;
+    }
+
+    .footer-icon-wifi .footer-icon{
+      width:100%;
+      font-size: 1em;
+    }
+    .icon-bdr{
+      height: 50%;
+    }
+  }
+  
+
+}
+
+
+
+
+
+
+
+/*------------------------------
+    HeaderGuide.vue 头部导航栏
+--------------------------------*/ 
+
+#header-guide{
+  width: 100%;
+  display: flex;
+  align-items:center;
+  justify-items: start;
+  padding: 0 8% 0 2%;
+  font-size: 1rem;
+  
+  .logo{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    .logo-icon{
+      width:2rem;
+      min-width:20px;
+    }
+    .logo-title{
+      font-weight: bold;
+      margin-left: 0.3rem;
+      font-size: 1.2rem;
+      
+    } 
+  } 
+  .navmenu-bar{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    
+
+    ul{
+      width: 50%;
+      display: flex ;
+      justify-content: center;
+      text-align: center;
+    }
+
+    li{
+      flex:1;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    .el-menu.el-menu--horizontal{
+      border-bottom: none !important;
+    }  
+    .el-menu--horizontal>.el-menu-item{
+      height:inherit !important;
+      line-height:3.5rem !important;
+    }
+    .el-menu-item{
+      padding: 0 2% !important;
+    }
+
+  }
+  
+  .headerguide-right{
+    display:flex;
+    align-items:center;
+    justify-items: center;
+    justify-content:center;
+    align-content: center;
+
+    .headerguide-icon-box{
+      min-width:18px;
+      margin: 0 0.25rem;
+      position: relative;
+      text-align: center;
+    }
+    
+  }
+  
+  .headerguide-user-box{
+    min-width:25px;
+    max-width:35px;
+  }
+  .headerguide-icon{
+    width: 1.5rem;
+    min-width: 10px;
+  }
+  .user-icon{
+    width: 2rem;
+    min-width: 12px;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+    
+  .unread-circle{
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+    position:absolute;
+    top: 0;
+    right:-2%;
+  }
+  .username-box{
+    width: 10%;
+    max-width: 15%;
+    overflow: hidden;white-space: nowrap;text-overflow:ellipsis;
+  }
+
+}
+
+/*------------------------------
+   HomeindexSidebar.vue 主页侧边栏
+--------------------------------*/ 
+#homeindex-sidebar{
+  height: 100%;
+  .sidebar{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    height: 100%;
+    
+
+    /* 修改下来菜单默认样式 */
+    .tac{
+      height: 100%;
+      width: 100% !important;
+    
+    }
+    .el-col-6{
+      height: 100%;
+      width: 100% !important;
+    }
+     
+    .el-submenu__icon-arrow{
+      font-size: 0.8rem;
+    }
+    .mydevices-title-box .el-submenu__icon-arrow{
+      right: 90%;
+    }
+    .el-submenu .el-menu-item{
+      min-width: 100% !important;
+      padding: 0 5%;
+    }
+    .el-submenu__title{
+      height: 3rem;
+      line-height: 3rem;
+      font-size: 1rem;
+      padding: 0;
+      padding-left: 10% !important;
+      border-top:none !important;
+      padding: 0 10% !important;
+    }
+    .sidebar-menu{
+      display: flex;
+      flex-flow: column;
+      .sidebar-menu-li{
+        display: flex;
+        flex-flow: column;
+        .sidebar-title-box{
+          height:100% !important;
+          display:flex;
+          align-items:center;
+        }
+        .sidebar-title-box~i{
+          right: 90%;
+        }
+        .device-list-box{
+          height: 18rem;
+          display: flex;
+          flex-flow: column;
+          .device-item{
+            margin: 0;
+          }
+        }
+        .sidebar-title {
+          font-size: 1rem;
+          flex:1;
+        }
+        
+      }
+      .sidebar-li-box{
+        width: 100%;
+      }
+      .sidebar-title {
+          width: 100%;
+          font-weight: bold;
+      }
+      .fa-lg{
+        font-size: 1.3rem;
+      }
+      
+    }
+    .el-menu{
+      height: 100%;
+      background-color:none !important;
+      border-right: none !important;
+    }
+    .el-menu-item{
+      padding-left: 15% !important;
+    }
+
+    .flex-h{
+      background-color: red;
+      flex: 1;
+    }
+
+    .el-scrollbar__wrap {
+      overflow-x: hidden;
+    }
+
+  }
+
+
+}
+
+
+/*------------------------------
+   HomeplaybackSidebar.vue 主页侧边栏
+--------------------------------*/ 
+#homeplayback-sidebar{
+    height: 100%;
+    width: 100%;
+    .sidebar{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      height: 100%;
+      
+  
+      /* 修改下来菜单默认样式 */
+      .tac{
+        height: 100%;
+        width: 100% !important;
+      
+      }
+      .el-col-6{
+        height: 100%;
+        width: 100% !important;
+      }
+       
+      
+      
+      .mydevices-title-box .el-submenu__icon-arrow{
+        right: 90%;
+      }
+      .el-submenu .el-menu-item{
+        min-width: 100% !important;
+        padding: 0 5%;
+      }
+      .el-submenu__title{
+        height: 3rem;
+        padding: 0;
+        padding-left: 10% !important;
+        border-top:none !important;
+        padding: 0 10% !important;
+      }
+
+
+      .sidebar-menu{
+        display: flex;
+        flex-flow: column;
+        .sidebar-menu-button{
+          height:3rem;
+          padding: 0 10%;
+        }
+        .sidebar-title-box{
+          height:100% !important;
+          display:flex;
+          align-items:center;
+        }
+        .sidebar-title {
+          width: 100%;
+          font-weight: bold;
+          font-size: 1rem;
+          flex:1;
+        }
+        .sidebar-menu-li{
+          display: flex;
+          flex-flow: column;
+          
+          .sidebar-title-box~i{
+            right: 90%;
+          }
+          .device-list-box{
+            height: 300px;
+            display: flex;
+            flex-flow: column;
+            .device-item{
+              margin: 0;
+            }
+          }
+          
+          
+        }
+        .sidebar-li-box{
+          width: 100%;
+        }
+  
+        
+      }
+      .el-menu{
+        height: 100%;
+        background-color:none !important;
+        border-right: none !important;
+      }
+      .el-menu-item{
+        padding-left: 15% !important;
+      }
+  
+      .flex-h{
+        background-color: red;
+        flex: 1;
+      }
+  
+      .el-scrollbar__wrap {
+        overflow-x: hidden;
+      }
+  
+    }
+  
+}
+
+
+
+/*------------------------------
+    LightCtrl.vue  灯控
+--------------------------------*/ 
+
+#light-ctrl{
+  width: 100%;
+  height: 250px;
+
+  .el-scrollbar{
+    width:100%;
+  }
+  .el-scrollbar__bar{
+    right: 1px;
+  }
+
+    
+  .sidebar-title{
+    font-size: 18px;
+  }
+  .lightctrl-box{
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    align-items:center;
+    justify-items: center;
+    flex-flow: column;
+    font-size: 0.9rem;
+    .lamp-icon{
+      width: 100%;
+      text-align: center;
+      i{
+        font-size: 3rem;
+      }
+    }
+    .lightctrl-buttonbox{
+      width: 100%;
+      display: flex;
+      align-items:center;
+      justify-items: center;
+      text-align: center;
+      margin: 5% 0;
+      .lightctrl-button{
+        flex: 1;
+        padding: 5% 0;
+        border:1px solid rgba(204,204,204,1);
+        border-radius:10%;
+      }
+      .light-button{
+        margin-right:5%;
+      }
+ 
+      .lamp-smart{
+        width: 100%;
+        text-align: center;
+        padding: 5% 0;
+        margin: 5% 0;
+        border-radius:5%;
+        border:1px solid rgba(204,204,204,1);
+      }
+      
+    }
+    
+    .lightctrl-slide{
+      width: 100%;
+      .slide-title{
+        margin-top: 0.5rem;
+        font-size: 1rem;
+      }
+      .slide-box{
+        width: 100%;
+        padding: 0 5%;
+      }
+    }
+
+  }
+    
+  
+}
+
+
+/*------------------------------
+    CloudDeck.vue 云台
+--------------------------------*/ 
+#cloud-deck{
+  width:100%;
+  display: flex;
+  align-items:center;
+  justify-items:center;
+  /* 修改下来菜单默认样式 */
+  .tac{
+    width: 100% !important;
+  }
+  .el-col-6{
+    width: 100% !important;
+  }
+
+  .el-submenu .el-menu-item{
+    min-width: 100% !important;
+    padding: 0 5%;
+  }
+  .el-submenu__title{
+    padding-left: 10% !important;
+  }
+  .el-menu-item{
+    padding-left: 15% !important;
+  }
+  .sidebar-title{
+    font-size: 1rem;
+  }
+  
+}
+
+
+
+
+
+/*------------------------------
+    DeviceList.vue 设备列表
+--------------------------------*/ 
+#device-list{
+  width:100%;
+  margin: 5% 0;
+  
+  
+   .device-box{
+    width: 100%;
+    padding: 0 2%;
+    display: flex;
+    flex-flow:column;
+    justify-content: center;
+    align-content: center;
+  
+      .device-review-one{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-items: center;
+        justify-content:center;
+        align-items:center;
+        border-radius:2%;
+        margin: 5% 0;
+        position: relative;
+      }
+      .device-review-more{
+        width: 100%;
+        display: flex;
+        align-content:center;
+        flex-wrap: wrap;
+        .device-review-item{
+          width:49%;
+          height: 50px;
+          margin: 1%;
+          display: flex;
+          justify-items: center;
+          justify-content:center;
+          align-items:center;
+          text-align: center;
+          border-radius:10%;
+          overflow: hidden;
+          position: relative;
+        }
+        .device-review-item:nth-child(2n){
+          margin-right:0;
+        }
+        .device-review-item:nth-child(2n+1){
+          margin-left:0;
+        }
+        .device-review-item:nth-child(2),.device-review-item:first-child{
+          margin-top:0; 
+        }
+          
+      }
+      .play-icon{
+        position: absolute;
+        top:40%;
+        left:44%;
+      }
+    
+    
+    
+     .device-info{
+      width: 100%;
+      // border:1px solid rgba(204,204,204,1);
+      height: 35px;
+      padding: 0 2%;
+      display: flex;
+      justify-items: center;
+      align-items:center;
+    }
+     .device-detial{
+      width: 60%;
+      margin: 0 2%;
+      flex: 1;
+      font-size: 0.8rem;
+      overflow: hidden;white-space: nowrap;text-overflow:ellipsis;
+    }
+  }
+}
+
+
+/*--------------------------------------
+    HomeplaybackDatepicker.vue 日期选择
+----------------------------------------*/ 
+#homeplayback-datapicker{
+  width: 100%;
+  height: 3rem;
+}
+
+
+/*--------------------------------------
+    HomeplaybackPagination.vue 分页
+----------------------------------------*/ 
+#homeplayback-pagination{
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  font-size: 0.8rem;
+  // align-content:center;
+  // justify-content:center;
+  .block{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .el-pagination {
+    white-space: nowrap;
+    padding: 0.1rem 0.2rem;
+    .el-select .el-input .el-input__inner {
+      padding-right: 0.5rem;
+      border-radius: 3px;
+    }
+    button, .el-pagination span:not([class*=suffix]) {
+      display: inline-block;
+      font-size: 0.8rem;
+      min-width:0.5rem !important; 
+      height: 3rem !important; 
+      line-height: 3rem !important; 
+      vertical-align: middle !important; 
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      // display: flex;
+      // align-items: center;
+    }
+    .el-select .el-input {
+      width: 6rem;
+      margin: 0 0.8rem;
+    }
+    .el-select>.el-input {
+      display: block;
+    }
+    .el-input--mini {
+      font-size:0.8rem;
+      margin: 0;
+    }
+    .el-pagination__sizes .el-input .el-input__inner {
+      font-size: 0.8rem;
+      padding-left: 0.5rem;
+    }
+
+    
+
+    .el-input--suffix .el-input__inner {
+        padding-right: 0.2rem;
+    }
+
+
+    .el-pagination__total {
+        margin-right: 0.1rem;
+        font-weight: 400;
+    }
+    .el-pager, .el-pager li {
+      vertical-align: center !important;
+      margin: 0;
+      display: inline-block;
+    }
+    .el-pager li {
+      padding: 0 0.2rem;
+      font-size: 0.8rem;
+      min-width: 35.5px;
+      height: 3rem;
+      line-height: 3rem;
+      box-sizing: border-box;
+      text-align: center;
+  }
+
+  }
+  
+
+}

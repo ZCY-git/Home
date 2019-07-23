@@ -1,0 +1,48 @@
+
+
+
+.center-item{
+    /* 子元素居中对齐 */
+    display: flex;
+    align-items: center;
+}
+
+
+.text-els{
+    /* 超出长度，字体省略号表示 */
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+
+.clearfloat:after{
+    /* 清除浮动 */
+    display:block;
+    clear:both;
+    content:"";
+    visibility:hidden;
+    height:0;
+}
+.clearfloat{zoom:1}
+
+
+
+/* --------------------------
+        elementUI 重构
+----------------------------- */
+
+.el-submenu__title{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.el-submenu__icon-arrow{
+    font-size: 0.8rem;
+    right: 1rem;
+    margin-top: -0.5rem;
+  }
+/* --------------------------
+        elementUI end
+----------------------------- */
